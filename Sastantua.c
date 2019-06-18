@@ -27,11 +27,13 @@ void sastantua(int num_tiers)
 
     for(current_tier = 1; current_tier <= num_tiers; current_tier++)
     {
-        height = current_tier + 2;
+        height = current_tier + 2; 
+        // Every tier has a height that is with two units bigger: height = tier + 2.
 
         for(cursor = 0; cursor < height; cursor++)
         {
             width += 2;
+            // The width of every line expands with 2 every time: current_width = last_width + 2.
             put_spaces(max_width / 2 - width / 2);
             put_characters(width, height, cursor, current_tier, num_tiers);
             printf("\n");
